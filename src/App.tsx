@@ -4,6 +4,8 @@ import style from "./App.module.css";
 import { Dica } from "./components/Dica";
 import { Letra } from "./components/Letra";
 import { Input } from "./components/Input";
+import { Button } from "./components/Button";
+import { LettersUsed } from "./components/LettersUsed";
 
 function App() {
   function handleRestartGame() {
@@ -25,9 +27,12 @@ function App() {
         </div>
 
         <h4>Palpite</h4>
-        <div>
-          <Input autoFocus maxLength={1}  placeholder="?"/>
+        <div className={style.guess}>
+          <Input autoFocus maxLength={1} placeholder="?" />
+          <Button title="Confirmar" />
         </div>
+
+        <LettersUsed/>
       </main>
     </div>
   );
