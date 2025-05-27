@@ -13,10 +13,14 @@ export function Letra({
 }: Props) {
   return (
     <div
-      className={`${style.letra} ${size === "small" && style.letterSmall} ${
-        color === "correct" && style.letterCorrect
-      } ${color === "wrong" && style.letterWrong}
-      }`}
+      className={[
+        style.letra,
+        size === "small" && style.letterSmall,
+        color === "correct" && style.letterCorrect,
+        color === "wrong" && style.letterWrong,
+      ]
+        .filter(Boolean)
+        .join(" ")}
     >
       <span>{value}</span>
     </div>
