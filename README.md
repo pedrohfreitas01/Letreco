@@ -1,54 +1,40 @@
-# React + TypeScript + Vite
+# 🎯 Jogo da Forca - Tech Edition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um jogo da forca divertido com palavras relacionadas à tecnologia, feito com **React**, **TypeScript** e **CSS Modules**.
 
-Currently, two official plugins are available:
+veja : https://letreco-beta.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ React
+- 💅 CSS Modules
+- 🟦 TypeScript
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🕹️ Como funciona?
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- O jogo escolhe aleatoriamente uma palavra relacionada à tecnologia.
+- A dica da palavra é exibida para ajudar.
+- Você tem um número limitado de tentativas para acertar.
+- Letras já utilizadas são listadas com status de acerto ou erro.
+- Ao vencer ou perder, o jogo reinicia com uma nova palavra.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 📦 Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/pedrohfreitas01/Letreco
+
+# Acesse a pasta do projeto
+cd guessnumber
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
